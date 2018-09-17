@@ -28,10 +28,13 @@ function handleColorMenu() {
 
 function showMenu() {
     handleColorMenu();
-    var top = isMobile() ? 50 : 750;
+    var startTop;
+    startTop = ($(window).width() < 1280) ? 500 : 750;
+    startTop = isMobile() ? 50 : startTop;
+
     var handle = function () {
         var scrollTop = $(document).scrollTop();
-        if (scrollTop >= top) {
+        if (scrollTop >= startTop) {
             $('.header').addClass('header-dark gradient-dark-purple');
         } else {
             $('.header').removeClass('header-dark gradient-dark-purple');
