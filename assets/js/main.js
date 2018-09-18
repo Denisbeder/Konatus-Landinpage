@@ -28,8 +28,16 @@ function handleColorMenu() {
 
 function showMenu() {
     handleColorMenu();
+    var wHeight = $(window).height();
     var startTop;
-    startTop = ($(window).width() < 1280) ? 500 : 750;
+    
+    if (wHeight <= 768 && wHeight > 576) {
+        startTop = 500;
+    } else if (wHeight <= 576) {
+        startTop = 305;
+    } else {
+        startTop = 750;
+    }
     startTop = isMobile() ? 50 : startTop;
 
     var handle = function () {
