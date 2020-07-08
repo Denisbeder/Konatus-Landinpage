@@ -1,0 +1,68 @@
+body {
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+	/* never visible - this is used in jQuery to check the current MQ */
+	content: "mobile";
+	display: none;
+}
+
+@media only screen and (min-width: 1050px) {
+	body::before {
+		/* never visible - this is used in jQuery to check the current MQ */
+		content: "desktop";
+	}
+}
+
+.gradient {
+	background: rgba(24, 62, 93, 1);
+	background: -moz-linear-gradient(
+		top,
+		rgba(24, 62, 93, 1) 0%,
+		rgba(5, 33, 51, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		top,
+		rgba(24, 62, 93, 1) 0%,
+		rgba(5, 33, 51, 1) 100%
+	);
+	background: linear-gradient(
+		to bottom,
+		rgba(24, 62, 93, 1) 0%,
+		rgba(5, 33, 51, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031E3A', endColorstr='#2A033A', GradientType=0);
+}
+
+.shadow {
+	-webkit-box-shadow: 0px 10px 50px 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 10px 50px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 10px 50px 5px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper {
+	position: relative;
+	z-index: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+
+	&.wrapper-space-top {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.cd-section {
+		height: auto !important;
+	}
+	.wrapper {
+		padding-bottom: 50px;
+	}
+	.wrapper-space-top {
+		padding-top: 50px;
+	}
+}

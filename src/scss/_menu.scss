@@ -1,0 +1,150 @@
+.menu-toggle {
+	display: none;
+	text-decoration: none;
+	position: absolute;
+	z-index: 100;
+	right: 15px;
+	top: 18px;
+	font-size: 30px;
+	color: #ffffff;
+	transition: 0.5s;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
+
+	&:hover,
+	&:active {
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	flex-grow: 1;
+	flex-shrink: 0;
+	padding-bottom: 14px;
+
+	li {
+		display: inline-block;
+
+		a {
+			display: block;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 18px;
+			font-size: 18px;
+			font-weight: lighter;
+			line-height: 0;
+			position: relative;
+			transition: 0.5s;
+			white-space: nowrap;
+
+			@media (max-width: 1024px) {
+				font-size: 18px;
+				padding: 10px 15px;
+			}
+
+			&:after {
+				content: "";
+				display: inline-block;
+				height: 3px;
+				background-color: #ffffff;
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				margin-left: -15%;
+				border-radius: 100px;
+			}
+
+			&:hover:after {
+				width: 30%;
+				animation: scaleHorizontal 0.5s;
+			}
+
+			&:hover,
+			&:hover:after {
+				opacity: 0.4;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		position: fixed;
+		touch-action: none;
+		width: auto;
+		height: auto;
+		background-color: rgba(255, 255, 255, 0.95);
+		top: 70px;
+		left: 15px;
+		right: 15px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		display: none;
+		border-radius: 10px;
+		z-index: 1;
+		margin: 0;
+		padding: 0 !important;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			top: -70px;
+			bottom: 0;
+			left: -15px;
+			right: 0;
+			z-index: -1;
+			background-color: rgba(0,0,0,.6);
+		}
+
+		li {
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			background-color: #FFF;
+
+			border-bottom: 1px solid #EEE;
+
+			&:first-child {
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border-bottom: none;
+			}
+
+			a {
+				text-align: center;
+				padding: 25px 15px;
+				color: #333 !important;
+
+				&:after {
+					margin-left: 0px;
+					background-color: #333;
+					height: 1px;
+				}
+		
+				&:hover {
+					opacity: 0.4;				
+				}
+			}
+		}
+	}
+}

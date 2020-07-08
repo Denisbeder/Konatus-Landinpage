@@ -1,0 +1,76 @@
+.wrapper-about {
+	background: url(/dist/images/about.png) no-repeat right -180px center,
+		url(/dist/images/about_bg.png) center center;
+	background-color: #ffffff;
+
+	.features {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		clear: both;
+		max-width: 53%;
+
+		li {
+			color: #848484;
+			display: flex;
+			font-size: 20px;
+			font-weight: lighter;
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+
+			i {
+				color: #66d3b2;
+				display: block;
+				float: left;
+				font-size: 40px;
+				margin-right: 22px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) and (min-width: 1441px) {
+	.wrapper-about {
+		background-position: right -300px center;
+	}
+}
+
+@media (max-width: 1440px) and (min-width: 1300px) {
+	.wrapper-about {
+		background-position: right -380px center;
+		.features {
+			max-width: 46%;
+		}
+	}
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+	.wrapper-about {
+		background-position: right -440px center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrapper-about {
+		background-position: right -560px center;
+	}
+}
+
+@media (max-width: 767px) {
+	.wrapper-about {
+		background: url(/dist/images/about_bg.png) center center;
+		background-color: #ffffff;
+
+		.features {
+			max-width: 100%;
+
+			li {
+				font-size: 16px;
+				line-height: 1.5;
+			}
+		}
+	}
+}

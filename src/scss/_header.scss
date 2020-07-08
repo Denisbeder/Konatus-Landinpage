@@ -1,0 +1,60 @@
+.header {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	transition: padding 0.5s;
+
+	.logo {
+		a {
+			display: block;
+		}
+
+		img {
+			height: 60px;
+			transition: ease-in-out height 0.5s;
+		}
+	}
+
+	.menu {
+		padding-bottom: 8px;
+	}
+
+	&.header-dark {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		transition: all 0.5s;
+		background-color: #183e5d;
+
+		.logo img {
+			height: 50px;
+		}
+	}
+
+	&.header-top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+}
+
+@media (max-width: 1337px) {
+	.header,
+	.header.header-dark {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.header {
+		&.header-dark .logo,
+		.logo {
+			flex: 1 0 100%;
+			text-align: center;
+			img {
+				height: 40px;
+			}
+		}
+	}
+}

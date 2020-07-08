@@ -1,0 +1,57 @@
+.select-box {
+	width: calc(100% / 2.5);
+	position: relative;
+	display: block;
+	background-color: #fff;
+	z-index: 10;
+	width: calc(100% / 2.5);
+	margin: 0 auto 30px auto;
+
+	&:after {
+		z-index: -1;
+		display: block;
+		content: "";
+		background: url(/dist/svg/chevron-down.svg) no-repeat center;
+		background-size: 30%;
+		opacity: 0.3;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 100%;
+		text-align: center;
+		font-size: 28px;
+		line-height: 58px;
+		pointer-events: none;
+	}
+
+	select {
+		border: none;
+		outline: none;
+		background: transparent;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin: 0;
+		display: block;
+		color: #999;
+		border-radius: 1000px;
+		padding: 15px 25px;
+		width: 100%;
+		font-size: 18px;
+		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+	}
+}
+
+@media (max-width: 1440px) and (min-width: 1300px) {
+	.select-box {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.select-box {
+		margin-bottom: 10px;
+		width: 80%;
+	}
+}

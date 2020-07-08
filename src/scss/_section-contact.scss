@@ -1,0 +1,25 @@
+.wrapper-contact {
+	background-color: #fff;
+}
+
+.wrapper-contact .content-text {
+	text-align: center;
+}
+
+.wrapper-contact .content-text .text {
+	margin: 80px 0px 0px;
+	padding: 0px;
+	color: #848484;
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.wrapper-contact .content-text .text p {
+	margin-bottom: 45px;
+}
+
+@media (max-width: 767px) {
+	.wrapper-contact .content-text img {
+		max-width: 200px;
+	}
+}
